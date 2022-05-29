@@ -12,7 +12,7 @@ cp CasetaMalvaBotReload/src/config/config_example.ini CasetaMalvaBotReload/src/c
 #edit de config.ini file with the params
 
 cd systemd/
-sudo cp bot-orchestator-telegram.service /etc/systemd/system
-sudo systemctl enable bot-orchestator-telegram.service
-sudo systemctl start bot-orchestator-telegram.service
-sudo systemctl status bot-orchestator-telegram.service
+sudo cp bot-casetamagentareload.service /etc/systemd/system
+sudo systemctl enable bot-casetamagentareload.service
+sudo systemctl start bot-casetamagentareload.service
+sudo systemctl status bot-casetamagentareload.service
