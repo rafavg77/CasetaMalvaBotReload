@@ -1,0 +1,15 @@
+[Unit]
+Description=Caseta Malva Reloaded
+
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=/home/pi/Production/CasetaMalvaBotReload/venv/bin/python3 /home/pi/Production/CasetaMalvaBotReload/src/bot.py
+Restart=on-failure
+RestartSec=10
+SyslogIdentifier=bot-casetamalvareload
+User=pi
+
+[Install]
+WantedBy=multi-user.target
