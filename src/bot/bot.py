@@ -22,6 +22,7 @@ logger = logging.getLogger(__name__)
 # Configurar parametros
 BOT_TOKEN = config.get('params','telegram_token')
 BOT_CHAT = config.get('params','telegram_chat_id')
+BOT_GROUP = config.get('params','telegram_group_id')
 USARUIOS_PERMITIDOS = config.get('base','permited')
 TOKEN_INFO = config.get('base','token_info')
 URL_NGROK = config.get('base','ulr_ngrok')
@@ -160,9 +161,9 @@ def all_messages(message):
 
 # Ejecución Inicial del Bot
 logger.info("🐧Bot is Running 🐧")
-bot.send_message(BOT_CHAT, "🐧Bot is Running 🐧")
+bot.send_message(BOT_GROUP, "🐧Bot is Running 🐧")
 # Consultando IP Pública de la Caseta
 handler = ipinfo.getHandler(TOKEN_INFO)
 details = handler.getDetails()
-bot.send_message(BOT_CHAT, "La IP Pública de la caseta es: " + details.ip)
+bot.send_message(BOT_GROUP, "La IP Pública de la caseta es: " + details.ip)
 bot.infinity_polling()
